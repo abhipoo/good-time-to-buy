@@ -1,0 +1,17 @@
+
+version: 2
+
+models:
+  - name: dim_scrip_codes
+    description: "Scrip codes dimension view"
+    columns:
+      - name: scrip_code
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: company_name
+        description: "Company name"
+        data_tests:
+          - unique
+          - not_null

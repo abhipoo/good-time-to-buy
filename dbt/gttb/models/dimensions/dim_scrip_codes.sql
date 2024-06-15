@@ -1,0 +1,1 @@
+select * from {{ ref('scrip_codes_seed') }}
