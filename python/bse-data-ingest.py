@@ -17,13 +17,16 @@ b = BSE()
 #q = b.getQuote('524348')
 
 #query_date = datetime.date.today()
-query_date = datetime.date(2024, 6, 12)
+query_date = datetime.date(2024, 6, 11)
+#query_date = datetime.date(2024, 6, 12)
 #query_date = datetime.date(2024, 6, 13)
 #query_date = datetime.date(2024, 6, 14)
 q = b.getBhavCopyData(query_date)
 #print(q)
 
-connection = psycopg2.connect("dbname=postgres user=gttb password=gttbpass port=5433")
+# connection = psycopg2.connect("dbname=postgres user=gttb password=gttbpass port=5433") #windows
+connection = psycopg2.connect("dbname=postgres user=abhi password=abhiPOST port=5432") #wsl docker
+
 cursor = connection.cursor()
 
 print(type(q))
