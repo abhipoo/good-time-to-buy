@@ -1,0 +1,19 @@
+
+version: 2
+
+models:
+  - name: fact_price
+    description: "Fact table for stock prices"
+    columns:
+      - name: bhav_date
+        description: "bhav_date"
+        data_tests:
+          - not_null
+      - name: scrip_code
+        description: "scrip_code"
+        data_tests:
+          - not_null
+      - name: close_price
+        description: "close price"
+        data_tests:
+          - not_null
